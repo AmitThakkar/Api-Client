@@ -15,13 +15,12 @@
         format: [config.logFormat],
         dateformat: config.dateFormat
     });
-    const client = net.connect({port: PORT, host: HOST}, () => {
+    const client = global.client = net.connect({port: PORT, host: HOST}, () => {
         logger.info('Connected to API Server!');
-        client.write('world!\r\n');
+        require('./client-code/test');
     });
     client.on('data', (data) => {
         logger.info(data.toString());
-        client.end();
     });
     client.on('end', () => {
         logger.info('Disconnected from API Server');
