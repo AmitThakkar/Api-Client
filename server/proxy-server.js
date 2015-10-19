@@ -16,7 +16,7 @@
     client.on('data', (data) => {
         let dataObject = JSON.parse(data);
         if (!dataObject.eventName) {
-            callbackStore[dataObject.callbackCount].apply(null, dataObject.result);
+            callbackStore[dataObject.callbackCount](dataObject.result[0], dataObject.result[1]);
             delete callbackStore[dataObject.callbackCount];
         }
     });
