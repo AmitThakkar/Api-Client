@@ -9,6 +9,8 @@
         environment: 'DEV',
         logLevel: 'trace',
         dateFormat: 'mmmm dd, yyyy HH:MM:ss',
+        PORT: 8082,
+        HOST: 'localhost',
         API_HOST: 'localhost',
         API_PORT: 8081,
         customApiHandlerDirectory: process.cwd() + '/temp/'

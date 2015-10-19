@@ -29,6 +29,7 @@
     "homepage": "https://github.com/AmitThakkar/Api-Client#readme",
     "dependencies": {
         "express": "^4.13.3",
+        "response-time": "^2.3.1",
         "tracer": "https://github.com/AmitThakkar/tracer.git"
     }
 }

@@ -6,12 +6,12 @@
     let callbackStore = {};
     let callbackCount = 0;
     const net = require('net');
-    const CONFIG = global.config;
+    const CONFIG = global.CONFIG;
+    const logger = global.logger;
     const PORT = process.env.API_PORT || CONFIG.API_PORT;
     const HOST = CONFIG.API_HOST;
     const client = net.connect({port: PORT, host: HOST}, () => {
         logger.info('Connected with API Server at %s:%s', HOST, PORT);
-        require('../client-code/test');
     });
     client.on('data', (data) => {
         let dataObject = JSON.parse(data);
@@ -25,9 +25,7 @@
         callback(Proxy.create({
             get: (obj, value) => {
                 return function () {
-                    logger.info(value, [].slice.call(arguments, 0, arguments.length - 1));
                     callbackStore[++callbackCount] = arguments[arguments.length - 1];
-                    console.log(callbackStore)
                     client.write(JSON.stringify({
                         'eventName': 'getSchema',
                         'databaseName': databaseName,
