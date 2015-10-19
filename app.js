@@ -5,24 +5,11 @@
     'use strict';
     // Requiring Dependencies
     const express = require('express');
-    const net = require('net');
-    const CONFIG = global.config = require('./server/config');
-    require('./server/proxies');
-    const PORT = process.env.API_PORT || CONFIG.API_PORT;
-    const HOST = CONFIG.API_HOST;
-    const logger = global.logger = require('tracer').colorConsole({
+    global.config = require('./server/config');
+    global.logger = require('tracer').colorConsole({
         level: config.logLevel,
         format: [config.logFormat],
         dateformat: config.dateFormat
     });
-    const client = global.client = net.connect({port: PORT, host: HOST}, () => {
-        logger.info('Connected to API Server!');
-        require('./client-code/test');
-    });
-    client.on('data', (data) => {
-        logger.info(data.toString());
-    });
-    client.on('end', () => {
-        logger.info('Disconnected from API Server');
-    });
+    require('./server/proxy-server');
 })(global, require, process);
