@@ -15,8 +15,10 @@
     });
     client.on('data', (data) => {
         let dataObject = JSON.parse(data);
-        callbackStore[dataObject.callbackCount](dataObject.result);
-        delete callbackStore[dataObject.callbackCount];
+        if (!dataObject.eventName) {
+            callbackStore[dataObject.callbackCount].apply(null, dataObject.result);
+            delete callbackStore[dataObject.callbackCount];
+        }
     });
     client.on('end', () => {
         logger.info('Disconnected from API Server');

@@ -13,6 +13,6 @@
         HOST: 'localhost',
         API_HOST: 'localhost',
         API_PORT: 8081,
-        customApiHandlerDirectory: process.cwd() + '/temp/'
+        customApiHandlerDirectory: process.cwd() + '/client-code/'
     };
 })(module, process);

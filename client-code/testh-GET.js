@@ -9,7 +9,7 @@ module.exports = {
     "1": function (req, res) {
         getSchema("test", "user", function (schema) {
             schema.find({}, function (error, users) {
-                res.status(200).json({users: users, isSucces: false});
+                res.status(200).json({users: users, isSuccess: false});
             });
 
         });
