@@ -1,0 +1,34 @@
+{
+    "name": "api-client",
+    "version": "0.0.1",
+    "description": "This is a Api client for Api Server",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AmitThakkar/Api-Client.git"
+    },
+    "keywords": [
+        "NodeJS",
+        "Dynamic",
+        "Schema",
+        "Mongoose",
+        "JavaScript",
+        "MongoDB",
+        "Mongo",
+        "Node",
+        "Socket.io"
+    ],
+    "author": "Amit Thakkar",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/AmitThakkar/Api-Client/issues"
+    },
+    "homepage": "https://github.com/AmitThakkar/Api-Client#readme",
+    "dependencies": {
+        "express": "^4.13.3",
+        "tracer": "https://github.com/AmitThakkar/tracer.git"
+    }
+}
