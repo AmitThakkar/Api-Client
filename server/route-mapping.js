@@ -8,11 +8,9 @@
         fs.readdir(CONFIG.customApiHandlerDirectory, (error, files) => {
             files.forEach((fileName) => {
                 let apiDetails = fileName.match(/(.*)-(.*).js/);
-                let apiHandlers = require(CONFIG.customApiHandlerDirectory + fileName);
+                let apiHandler = require(CONFIG.customApiHandlerDirectory + fileName);
                 let apiDetailsAndHandlers = ['/' + apiDetails[1]];
-                for(let key in apiHandlers) {
-                    apiDetailsAndHandlers.push(apiHandlers[key]);
-                }
+                apiDetailsAndHandlers.push(apiHandler);
                 app[apiDetails[2].toLowerCase()].apply(app, apiDetailsAndHandlers);
             });
         });
