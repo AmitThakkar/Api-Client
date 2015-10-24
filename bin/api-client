@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+((require) => {
+    'use strict';
+    console.log("Starting API Client: ");
+    require('../lib/api-client');
+})(require);
