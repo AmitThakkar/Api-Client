@@ -4,7 +4,7 @@
     "description": "This is a Api client for Api Server",
     "main": "./lib/api-client",
     "scripts": {
-        "start": "node --harmony_proxies ./bin/api-client",
+        "start": "node --harmony_proxies ./lib/api-client",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -35,7 +35,7 @@
     },
     "preferGlobal": "true",
     "bin": {
-        "api-client": "./bin/api-client",
-        "ac": "./bin/api-client"
+        "api-client": "./bin/api-client.sh",
+        "ac": "./bin/api-client.sh"
     }
 }
