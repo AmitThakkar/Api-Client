@@ -3,6 +3,14 @@
 echo -n "API Client required lates Node.JS, Do you want to install latest Node.JS with NVM? [Y/n]:"
 read installNVMFlag
 
+if [ -f ~/.bash_profile ]; then
+    echo ""
+else
+    echo ".bash_profile does not exists!"
+    echo "Creating ~/.bash_profile file!"
+    touch ~/.bash_profile
+fi
+
 if [ -z "${installNVMFlag}" ] || [ "${installNVMFlag}" == "" ] || [ "Y" == "${installNVMFlag}" ] || [ "y" == "${installNVMFlag}" ]; then
 	echo -e "\n\n========================================================================"
 	echo "Installing NVM ...."
