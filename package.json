@@ -1,41 +1,42 @@
 {
-    "name": "api-client",
-    "version": "0.0.1",
-    "description": "This is a Api client for Api Server",
-    "main": "./lib/api-client",
-    "scripts": {
-        "start": "node --harmony_proxies ./bin/api-client",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/AmitThakkar/Api-Client.git"
-    },
-    "keywords": [
-        "NodeJS",
-        "Dynamic",
-        "Schema",
-        "Mongoose",
-        "JavaScript",
-        "MongoDB",
-        "Mongo",
-        "Node",
-        "Socket.io"
-    ],
-    "author": "Amit Thakkar",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/AmitThakkar/Api-Client/issues"
-    },
-    "homepage": "https://github.com/AmitThakkar/Api-Client#readme",
-    "dependencies": {
-        "express": "^4.13.3",
-        "response-time": "^2.3.1",
-        "tracer": "https://github.com/AmitThakkar/tracer.git"
-    },
-    "preferGlobal": "true",
-    "bin": {
-        "api-client": "./bin/api-client",
-        "ac": "./bin/api-client"
-    }
+  "name": "api-client",
+  "version": "0.0.1",
+  "description": "This is a Api client for Api Server",
+  "main": "./lib/api-client",
+  "scripts": {
+    "start": "node --harmony_proxies ./bin/api-client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmitThakkar/Api-Client.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Dynamic",
+    "Schema",
+    "Mongoose",
+    "JavaScript",
+    "MongoDB",
+    "Mongo",
+    "Node",
+    "Socket.io"
+  ],
+  "author": "Amit Thakkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmitThakkar/Api-Client/issues"
+  },
+  "homepage": "https://github.com/AmitThakkar/Api-Client#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "response-time": "^2.3.1",
+    "socket.io-client": "^1.3.7",
+    "tracer": "https://github.com/AmitThakkar/tracer.git"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "api-client": "./bin/api-client",
+    "ac": "./bin/api-client"
+  }
 }
